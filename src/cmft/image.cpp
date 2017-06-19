@@ -711,22 +711,14 @@ namespace cmft
     #define GL_RGB              0x1907
     #define GL_RGBA             0x1908
 
+    #define GL_RGB8             0x8051
+    #define GL_RGBA8            0x8058
+    #define GL_RGB16            0x8054
+    #define GL_RGBA16           0x805B
     #define GL_RGBA32F          0x8814
     #define GL_RGB32F           0x8815
     #define GL_RGBA16F          0x881A
     #define GL_RGB16F           0x881B
-    #define GL_RGBA32UI         0x8D70
-    #define GL_RGB32UI          0x8D71
-    #define GL_RGBA16UI         0x8D76
-    #define GL_RGB16UI          0x8D77
-    #define GL_RGBA8UI          0x8D7C
-    #define GL_RGB8UI           0x8D7D
-    #define GL_RGBA32I          0x8D82
-    #define GL_RGB32I           0x8D83
-    #define GL_RGBA16I          0x8D88
-    #define GL_RGB16I           0x8D89
-    #define GL_RGBA8I           0x8D8E
-    #define GL_RGB8I            0x8D8F
 
     struct KtxHeader
     {
@@ -754,14 +746,14 @@ namespace cmft
     static const GlSizedInternalFormat s_glSizedInternalFormats[TextureFormat::Count] =
     {
         { 0, 0 }, //BGR8
-        { GL_RGB8UI,   GL_RGB  }, //RGB8
-        { GL_RGB16UI,  GL_RGB  }, //RGB16
+        { GL_RGB8,     GL_RGB  }, //RGB8
+        { GL_RGB16,    GL_RGB  }, //RGB16
         { GL_RGB16F,   GL_RGB  }, //RGB16F
         { GL_RGB32F,   GL_RGB  }, //RGB32F
         { 0, 0 }, //RGBE
         { 0, 0 }, //BGRA8
-        { GL_RGBA8UI,  GL_RGBA }, //RGBA8
-        { GL_RGBA16UI, GL_RGBA }, //RGBA16
+        { GL_RGBA8,    GL_RGBA }, //RGBA8
+        { GL_RGBA16,   GL_RGBA }, //RGBA16
         { GL_RGBA16F,  GL_RGBA }, //RGBA16F
         { GL_RGBA32F,  GL_RGBA }, //RGBA32F
     };
@@ -795,13 +787,13 @@ namespace cmft
     } s_translateKtxFormat[] =
     {
         { GL_RGB,      TextureFormat::RGB8    },
-        { GL_RGB8UI,   TextureFormat::RGB8    },
-        { GL_RGB16UI,  TextureFormat::RGB16   },
+        { GL_RGB8,     TextureFormat::RGB8    },
+        { GL_RGB16,    TextureFormat::RGB16   },
         { GL_RGB16F,   TextureFormat::RGB16F  },
         { GL_RGB32F,   TextureFormat::RGB32F  },
         { GL_RGBA,     TextureFormat::RGBA8   },
-        { GL_RGBA8UI,  TextureFormat::RGBA8   },
-        { GL_RGBA16UI, TextureFormat::RGBA16  },
+        { GL_RGBA8,    TextureFormat::RGBA8   },
+        { GL_RGBA16,   TextureFormat::RGBA16  },
         { GL_RGBA16F,  TextureFormat::RGBA16F },
         { GL_RGBA32F,  TextureFormat::RGBA32F },
     };
